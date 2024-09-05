@@ -1,9 +1,11 @@
-const { series, parallel } = require("gulp");
+const { src, dest, watch, series, parallel } = require("gulp");
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const terser = require('gulp-terser');
+const browsersync = require('browser-sync').create();
 
-// function defaultTask(cb) {
-//     // place code for your default task here
-//     cb();
-//   }
+//sass tasks
   
 function scssTask(){    
     return src(files.scssPath) //loading directory of source files
@@ -13,7 +15,9 @@ function scssTask(){
         .pipe(sourcemaps.write('.')) //creates sourcemap file in same directory
         .pipe(dest('dist') //tells gulp to put final css file in dist directory
     );
-}  
+}
+
+//js tasks
 
 function jsTask(){
     return src([files.jsPath]) //loads files from jspath
@@ -41,4 +45,34 @@ function watchTask(){
     );
 }
 
-exports.default = series(parallel(scssTask, jsTask), watchTask)
+//browser sync
+
+function browsersyncServe(cb){ //initializes local browsersync server
+    browsersync.init({
+      server: {
+        baseDir: '.'
+      }    
+    });
+    cb();
+}
+
+function browsersyncReload(cb){ //reloads browsersync
+    browsersync.reload();
+    cb();
+}
+
+// watch task and update browser
+
+function watchTask(){
+    watch('*.html', browsersyncReload);
+    watch(['app/**/*.scss', 'app/**/*.js'], series(scssTask, jsTask, browsersyncReload));
+}
+
+//default task that runs when you use 'gulp' command
+
+exports.default = series(
+    scssTask,
+    jsTask,
+    browsersyncServe,
+    watchTask
+);
