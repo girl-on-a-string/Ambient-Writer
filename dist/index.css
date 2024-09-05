@@ -1,1 +1,32 @@
-/*# sourceMappingURL=index.css.map */
+:root {
+  --main-bg: white;
+}
+
+:root.dark {
+  --main-bg: #383a46;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.1;
+}
+
+aside {
+  display: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 0.625rem;
+}
+main #document {
+  width: 50vw;
+  max-height: 100vh;
+}/*# sourceMappingURL=index.css.map */
