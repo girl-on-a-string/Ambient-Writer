@@ -11,7 +11,7 @@ let key = null;
 
 doc.addEventListener("click", () => { //so typing only happens in the document window/div
     doc.addEventListener("keydown", (e) => {
-        doc.innerText += e;
+        doc.innerText += e.key;
     });
 });
 
