@@ -1,10 +1,11 @@
-:root {
-    --main-bg: white;
+:root { //light theme
+    --main-bg: ghostwhite;
+    --doc-bg: white;
 }
 
-:root.dark {
-    --main-bg: #383a46;
-}
+// :root.dark { //dark theme
+//     --main-bg: #383a46;
+// }
 
 //
 
@@ -28,10 +29,21 @@ main {
     height: 100vh;
     display: flex;
     justify-content: center;
-    padding: .625rem;
+    padding: 2.5rem;
 
     #document {
         width: 50vw;
         max-height: 100vh;
+        padding: 6rem;
+    }
+}
+
+//colors
+
+main {
+    background-color: var(--main-bg);
+
+    #document {
+        background-color: var(--doc-bg);
     }
 }

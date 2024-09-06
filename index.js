@@ -10,5 +10,9 @@ let key = null;
 //section 2: keyboard handling
 
 doc.addEventListener("click", () => { //so typing only happens in the document window/div
-
+    doc.addEventListener("keydown", (e) => {
+        doc.innerText += e;
+    });
 });
+
+console.log("working")

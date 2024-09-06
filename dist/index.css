@@ -1,9 +1,6 @@
 :root {
-  --main-bg: white;
-}
-
-:root.dark {
-  --main-bg: #383a46;
+  --main-bg: ghostwhite;
+  --doc-bg: white;
 }
 
 body {
@@ -24,9 +21,17 @@ main {
   height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 0.625rem;
+  padding: 2.5rem;
 }
 main #document {
   width: 50vw;
   max-height: 100vh;
+  padding: 6rem;
+}
+
+main {
+  background-color: var(--main-bg);
+}
+main #document {
+  background-color: var(--doc-bg);
 }/*# sourceMappingURL=index.css.map */
