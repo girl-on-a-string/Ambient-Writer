@@ -2,18 +2,14 @@
 
 import tkinter as tk
 
-# create root window
+class myGUI:
+    def __init__(self):
+        self.root = tk.Tk();
+        self.root.geometry("2000x1000");
+        self.root.title("(AmbientWriter)"); #include name of doc or "untitled document" in var before. ex. "title of book (ambientwriter)" later
 
-root = tk.Tk();
+        self.label = tk.Label(self.root, text="Your message", font=("arial", 18))
 
-root.geometry("2000x1000");
+        self.root.mainloop();
 
-root.title("(AmbientWriter)"); #include name of doc or "untitled document" in var before. ex. "title of book (ambientwriter)" later
-
-#create menu
-
-
-
-#instanciate root window
-
-root.mainloop();
+myGUI();
