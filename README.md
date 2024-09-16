@@ -1,2 +1,2 @@
 # Ambient-Writer
-Customizable, minimalist in-browser writing application
+Customizable, minimalist writing application based off Calmly Writer and Focus Writer.
