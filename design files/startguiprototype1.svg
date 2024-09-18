@@ -23,17 +23,43 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
-     inkscape:zoom="0.54907407"
-     inkscape:cx="1919.5953"
-     inkscape:cy="1080"
+     inkscape:zoom="0.30399808"
+     inkscape:cx="1970.4072"
+     inkscape:cy="1250.0079"
      inkscape:window-width="3440"
      inkscape:window-height="1382"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true">
+    <inkscape:grid
+       id="grid2"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="false" />
+  </sodipodi:namedview>
   <defs
-     id="defs1" />
+     id="defs1">
+    <rect
+       x="863.44913"
+       y="422.39851"
+       width="915.72705"
+       height="79.523036"
+       id="rect2" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -45,5 +71,15 @@
        height="2159.8059"
        x="1.2142023"
        y="1.0111127" />
+    <text
+       xml:space="preserve"
+       id="text1"
+       style="font-size:53.3333px;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#353941;fill-opacity:1;stroke:none;stroke-width:20"
+       transform="translate(630.90512,223.58303)"><tspan
+         x="863.44922"
+         y="470.92509"
+         id="tspan3"><tspan
+           style="font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#ffffff"
+           id="tspan1">Welcome to AmbientWriter</tspan></tspan></text>
   </g>
 </svg>

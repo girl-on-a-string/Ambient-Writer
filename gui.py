@@ -14,21 +14,16 @@ class startGUI:
         #create frame
 
         frame = tk.Frame(self.root);
+        frame.pack()
 
-        #define grid
+        #create widgets
 
-        self.root.columnconfigure(0, weight=1)
-        self.root.columnconfigure(1, weight=1)
-        self.root.columnconfigure(2, weight=1)
-        self.root.columnconfigure(3, weight=1)
-        self.root.columnconfigure(4, weight=1)
-        self.root.columnconfigure(5, weight=1)
-        self.root.columnconfigure(6, weight=1)
-        self.root.columnconfigure(7, weight=1)
+        label = tk.Label(frame, text="Welcome to AmbientWriter", font=75)
+        label.pack()
 
-        #place widgets
+        openRecentBtn = tk.Button(frame, text="Open recent document")
 
-
+        createNewBtn = tk.Button(frame, text="Create new document")
 
         #create window
 
