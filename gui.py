@@ -75,6 +75,16 @@ class docGUI:
 
         formatMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=formatMenu, label="Format")
+        headingSubMenu = tk.Menu(formatMenu, tearoff=0)
+        formatMenu.add_cascade(menu=headingSubMenu, label="Heading")
+        headingSubMenu.add_command(label="Normal")
+        headingSubMenu.add_command(label="Heading 1")
+        headingSubMenu.add_command(label="Heading 2")
+        headingSubMenu.add_command(label="Heading 3")
+        headingSubMenu.add_command(label="Heading 4")
+        headingSubMenu.add_command(label="Heading 5")
+        headingSubMenu.add_command(label="Heading 6")
+
 
         toolsMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=toolsMenu, label="Tools")
