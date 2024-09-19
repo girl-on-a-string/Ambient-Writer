@@ -44,14 +44,22 @@ class docGUI:
         self.textbox.pack(padx=10, pady=10)
 
         #make menu
-
-        self.root.option_add("*tearoff", False)
-
         menuBar = tk.Menu(self.root) #main menubar that contains all others
 
-
-        fileMenu = tk.Menu(menuBar)
+        fileMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=fileMenu, label="File")
+        fileMenu.add_command(label="New File", accelerator="Ctrl+N")
+        fileMenu.add_command(label="Open File", accelerator="Ctrl+O")
+        fileMenu.add_command(label="Reload File", accelerator="Ctrl+R")
+        fileMenu.add_command(label="New Workspace", accelerator="Ctrl+Shift+N")
+        fileMenu.add_separator()
+        fileMenu.add_command(label="Save", accelerator="Ctrl+S")
+        fileMenu.add_command(label="Save As", accelerator="Ctrl+Shift+S")
+        fileMenu.add_command(label="Rename")
+        fileMenu.add_command(label="Save All")
+        fileMenu.add_separator()
+        fileMenu.add_command(label="Print")
+        fileMenu.add_command(label="Page Setup", accelerator="Ctrl+P")
 
         editMenu = tk.Menu(menuBar)
         menuBar.add_cascade(menu=editMenu, label="Edit")
