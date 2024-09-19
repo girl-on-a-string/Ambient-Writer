@@ -61,19 +61,28 @@ class docGUI:
         fileMenu.add_command(label="Print")
         fileMenu.add_command(label="Page Setup", accelerator="Ctrl+P")
 
-        editMenu = tk.Menu(menuBar)
+        editMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=editMenu, label="Edit")
+        editMenu.add_command(label="Undo", accelerator="Ctrl+Z")
+        editMenu.add_command(label="Redo", accelerator="Ctrl+Y")
+        editMenu.add_separator()
+        editMenu.add_command(label="Cut", accelerator="Ctrl+X")
+        editMenu.add_command(label="Copy", accelerator="Ctrl+C")
+        editMenu.add_command(label="Paste", accelerator="Ctrl+Z")
+        editMenu.add_separator()
+        editMenu.add_command(label="Find", accelerator="Ctrl+F")
+        editMenu.add_command(label="Replace", accelerator="Ctrl+H")
 
-        formatMenu = tk.Menu(menuBar)
+        formatMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=formatMenu, label="Format")
 
-        toolsMenu = tk.Menu(menuBar)
+        toolsMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=toolsMenu, label="Tools")
 
-        settingsMenu = tk.Menu(menuBar)
+        settingsMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=settingsMenu, label="Settings")
 
-        helpMenu = tk.Menu(menuBar)
+        helpMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=helpMenu, label="Help")
 
         #init
