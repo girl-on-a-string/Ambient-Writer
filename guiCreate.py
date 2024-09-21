@@ -1,6 +1,9 @@
 #imports
 
+# import guiFunct
 import tkinter as tk
+
+#class
 
 class docGUI:
     def __init__(self):
@@ -81,10 +84,14 @@ class docGUI:
 
         #create bottom frame
 
-        bottomBarFrame = tk.Frame(self.root)
-        bottomBarFrame.pack(side="bottom")
+        bottomBarFrame = tk.Frame(self.root, borderwidth=2)
+        bottomBarFrame.pack()
 
-        
+        wordCount = ""
+        wordCountMeter = tk.Label(bottomBarFrame, text=f"Word Count: {wordCount}")
+
+        dailyProg = ""
+        dailyProgMeter = tk.Label(bottomBarFrame, text=f"Daily Goal: {dailyProg}")
 
         #init
 
@@ -92,6 +99,4 @@ class docGUI:
         self.root.mainloop()
 
 docGUI()
-
-# startGUI()
 
