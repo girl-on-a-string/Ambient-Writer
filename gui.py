@@ -1,38 +1,6 @@
 #imports
 
-import palettes
 import tkinter as tk
-
-# class startGUI:
-#     def __init__(self):
-#         #create window
-
-#         self.root = tk.Tk()
-#         self.root.geometry("2000x1000")
-#         self.root.title("AmbientWriter")
-
-#         #create frame
-
-#         frame = tk.Frame(self.root);
-#         frame.pack()
-
-#         #create widgets
-
-#         welcome = tk.Label(frame, text="Welcome to AmbientWriter", font=75)
-#         welcome.pack()
-
-#         openRecentBtn = tk.Button(frame, text="Open recent document")
-#         openRecentBtn.pack()
-
-#         createNewBtn = tk.Button(frame, text="Create new document")
-#         createNewBtn.pack()
-
-#         recentsList = tk.Label(frame, text="Recent documents...")
-#         recentsList.pack();
-
-#         #create window
-
-#         self.root.mainloop()
 
 class docGUI:
     def __init__(self):
