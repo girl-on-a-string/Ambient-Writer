@@ -79,6 +79,13 @@ class docGUI:
         menuBar.add_cascade(menu=helpMenu, label="Help")
         helpMenu.add_command(label="About AmbientWriter")
 
+        #create bottom frame
+
+        bottomBarFrame = tk.Frame(self.root)
+        bottomBarFrame.pack(side="bottom")
+
+        
+
         #init
 
         self.root.config(menu=menuBar)
