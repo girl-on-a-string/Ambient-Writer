@@ -51,7 +51,7 @@ class docGUI:
         fileMenu.add_command(label="New File", accelerator="Ctrl+N")
         fileMenu.add_command(label="Open File", accelerator="Ctrl+O")
         fileMenu.add_command(label="Reload File", accelerator="Ctrl+R")
-        fileMenu.add_command(label="New Workspace", accelerator="Ctrl+Shift+N")
+        fileMenu.add_command(label="New Window", accelerator="Ctrl+Shift+N")
         fileMenu.add_separator()
         fileMenu.add_command(label="Save", accelerator="Ctrl+S")
         fileMenu.add_command(label="Save As", accelerator="Ctrl+Shift+S")
@@ -88,6 +88,7 @@ class docGUI:
         formatMenu.add_checkbutton(label="Italics", accelerator="Ctrl+I")
         formatMenu.add_checkbutton(label="Bold", accelerator="Ctrl+B")
         formatMenu.add_checkbutton(label="Underline", accelerator="Ctrl+U")
+        formatMenu.add_checkbutton(label="Highlight")
         formatMenu.add_checkbutton(label="Strikethrough", accelerator="Ctrl+K")
         formatMenu.add_checkbutton(label="Superscript", accelerator="Ctrl+^")
         formatMenu.add_checkbutton(label="Subscript", accelerator="Ctrl+_")
@@ -98,12 +99,17 @@ class docGUI:
 
         toolsMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=toolsMenu, label="Tools")
+        toolsMenu.add_command(label="Word Count...")
+        toolsMenu.add_command(label="Daily Goals...")
 
         settingsMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=settingsMenu, label="Settings")
+        settingsMenu.add_command(label="Themes")
+        settingsMenu.add_command(label="Preferences")
 
         helpMenu = tk.Menu(menuBar, tearoff=0)
         menuBar.add_cascade(menu=helpMenu, label="Help")
+        helpMenu.add_command(label="About AmbientWriter")
 
         #init
 
